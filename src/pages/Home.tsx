@@ -136,7 +136,7 @@ const Home = () => {
                         loading="lazy"
                       />
                     ) : (
-                      <span className="badge badge-coming-soon">Coming Soon</span>
+                      <span className="badge badge-coming-soon">Coming Soon — Late 2028–2032</span>
                     )}
                     <div className="absolute inset-0 bg-[#00d4ff]/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>

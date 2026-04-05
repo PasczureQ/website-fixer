@@ -78,7 +78,7 @@ const ProductDetail = () => {
                 />
               ) : (
                 <div className="text-center relative z-10">
-                  <span className="badge badge-coming-soon text-lg mb-6">Coming Soon</span>
+                  <span className="badge badge-coming-soon text-lg mb-6">Coming Soon — Late 2028–2032</span>
                   <p className="text-white/40 mt-4">This product is currently in development</p>
                 </div>
               )}
@@ -103,7 +103,7 @@ const ProductDetail = () => {
                 {product.category}
               </span>
               {product.comingSoon && (
-                <span className="badge badge-coming-soon">Coming Soon</span>
+                <span className="badge badge-coming-soon">Coming Soon — Late 2028–2032</span>
               )}
             </div>
 
