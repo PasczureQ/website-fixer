@@ -9,7 +9,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredProducts = products.filter(p => !p.comingSoon).slice(0, 3);
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <main>
