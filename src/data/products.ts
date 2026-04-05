@@ -21,7 +21,7 @@ export const products: Product[] = [
     category: 'mouse',
     tier: 'flagship',
     price: 189,
-    image: '/images/1000010676.png',
+    image: '/images/1000010676.jpg',
     description: 'The pinnacle of gaming precision. The Carbon X PRO features a revolutionary carbon fiber composite shell, delivering unmatched strength at under 40g. With 8KHz polling rate and the PixArt 3950 HS sensor, every micro-movement is captured with absolute accuracy.',
     shortDescription: 'Ultra-lightweight flagship gaming mouse under 40g with 8KHz polling.',
     features: [
