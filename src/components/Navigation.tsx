@@ -11,7 +11,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -27,30 +27,30 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#050505]/90 backdrop-blur-xl border-b border-white/5'
+          ? 'bg-[#050505]/95 backdrop-blur-md border-b border-white/[0.04]'
           : 'bg-transparent'
       }`}
     >
       <nav className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded bg-gradient-to-br from-[#00d4ff] to-[#0099cc] flex items-center justify-center">
-              <span className="text-black font-bold text-lg">I</span>
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 bg-[#00d4ff] flex items-center justify-center">
+              <span className="text-black font-black text-sm tracking-tight">I</span>
             </div>
-            <span className="text-xl font-bold tracking-tight group-hover:text-[#00d4ff] transition-colors">
-              IRAVIS
+            <span className="text-base font-bold tracking-[0.15em] uppercase group-hover:text-[#00d4ff] transition-colors">
+              Iravis
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/' ? 'text-[#00d4ff]' : 'text-white/70 hover:text-white'
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+                location.pathname === '/' ? 'text-white' : 'text-white/50 hover:text-white'
               }`}
             >
               Home
@@ -63,86 +63,86 @@ const Navigation = () => {
               onMouseLeave={() => setIsProductsOpen(false)}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-1.5 text-[13px] font-medium tracking-wide uppercase transition-colors ${
                   location.pathname.startsWith('/products')
-                    ? 'text-[#00d4ff]'
-                    : 'text-white/70 hover:text-white'
+                    ? 'text-white'
+                    : 'text-white/50 hover:text-white'
                 }`}
               >
                 Products
                 <ChevronDown
-                  size={14}
+                  size={12}
                   className={`transition-transform ${isProductsOpen ? 'rotate-180' : ''}`}
                 />
               </button>
 
               {isProductsOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                  <div className="bg-[#0a0a0a] border border-white/10 rounded-lg p-6 min-w-[500px] shadow-2xl">
-                    <div className="grid grid-cols-2 gap-8">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                  <div className="bg-[#0c0c0c] border border-white/[0.06] p-5 min-w-[440px] shadow-2xl shadow-black/50">
+                    <div className="grid grid-cols-2 gap-6">
                       <div>
-                        <h4 className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-4">
-                          Gaming Mice
+                        <h4 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-3">
+                          Mice
                         </h4>
-                        <div className="space-y-3">
+                        <div className="space-y-1">
                           {mice.map(mouse => (
                             <Link
                               key={mouse.id}
                               to={`/products/${mouse.id}`}
-                              className="flex items-center gap-3 p-2 rounded hover:bg-white/5 transition-colors group"
+                              className="flex items-center gap-3 p-2 hover:bg-white/[0.03] transition-colors group/item"
                             >
                               {mouse.image && (
                                 <img
                                   src={mouse.image}
                                   alt={mouse.name}
-                                  className="w-10 h-10 object-contain rounded bg-white/5"
+                                  className="w-8 h-8 object-contain"
                                 />
                               )}
                               <div>
-                                <p className="text-sm font-medium group-hover:text-[#00d4ff] transition-colors">
+                                <p className="text-sm font-medium group-hover/item:text-[#00d4ff] transition-colors">
                                   {mouse.shortName}
                                 </p>
-                                <p className="text-xs text-white/40">${mouse.price}</p>
+                                <p className="text-[11px] text-white/30">${mouse.price}</p>
                               </div>
                             </Link>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-4">
-                          Other Products
+                        <h4 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-3">
+                          Other
                         </h4>
-                        <div className="space-y-3">
+                        <div className="space-y-1">
                           {otherProducts.map(product => (
                             <Link
                               key={product.id}
                               to={`/products/${product.id}`}
-                              className="flex items-center gap-3 p-2 rounded hover:bg-white/5 transition-colors group"
+                              className="flex items-center gap-3 p-2 hover:bg-white/[0.03] transition-colors group/item"
                             >
                               {product.image && (
                                 <img
                                   src={product.image}
                                   alt={product.name}
-                                  className="w-10 h-10 object-contain rounded bg-white/5"
+                                  className="w-8 h-8 object-contain"
                                 />
                               )}
                               <div>
-                                <p className="text-sm font-medium group-hover:text-[#00d4ff] transition-colors">
+                                <p className="text-sm font-medium group-hover/item:text-[#00d4ff] transition-colors">
                                   {product.shortName}
                                 </p>
-                                <p className="text-xs text-white/40">${product.price}</p>
+                                <p className="text-[11px] text-white/30">${product.price}</p>
                               </div>
                             </Link>
                           ))}
                         </div>
                       </div>
                     </div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="mt-4 pt-3 border-t border-white/[0.04]">
                       <Link
                         to="/products"
-                        className="text-sm text-[#00d4ff] hover:underline"
+                        className="text-[11px] font-semibold text-[#00d4ff] uppercase tracking-wider hover:underline"
                       >
-                        View All Products →
+                        View all products →
                       </Link>
                     </div>
                   </div>
@@ -152,8 +152,8 @@ const Navigation = () => {
 
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/about' ? 'text-[#00d4ff]' : 'text-white/70 hover:text-white'
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+                location.pathname === '/about' ? 'text-white' : 'text-white/50 hover:text-white'
               }`}
             >
               About
@@ -161,8 +161,8 @@ const Navigation = () => {
 
             <Link
               to="/contact"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/contact' ? 'text-[#00d4ff]' : 'text-white/70 hover:text-white'
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+                location.pathname === '/contact' ? 'text-white' : 'text-white/50 hover:text-white'
               }`}
             >
               Contact
@@ -170,8 +170,8 @@ const Navigation = () => {
 
             <Link
               to="/affiliate"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/affiliate' ? 'text-[#00d4ff]' : 'text-white/70 hover:text-white'
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+                location.pathname === '/affiliate' ? 'text-white' : 'text-white/50 hover:text-white'
               }`}
             >
               Affiliate
@@ -179,41 +179,54 @@ const Navigation = () => {
 
             <Link
               to="/socials"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/socials' ? 'text-[#00d4ff]' : 'text-white/70 hover:text-white'
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
+                location.pathname === '/socials' ? 'text-white' : 'text-white/50 hover:text-white'
               }`}
             >
               Community
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link to="/products" className="btn-primary text-sm">
-              Shop Now
+          {/* CTA + Mobile */}
+          <div className="flex items-center gap-4">
+            <Link to="/products" className="hidden lg:block text-[12px] font-bold tracking-[0.1em] uppercase text-black bg-[#00d4ff] px-6 py-2.5 hover:bg-[#00b8e0] transition-colors">
+              Shop
             </Link>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-1 text-white"
+            >
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-white"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#0a0a0a] border-t border-white/10">
-          <div className="container mx-auto px-6 py-6 space-y-4">
-            <Link to="/" className="block py-3 text-lg font-medium">Home</Link>
-            <Link to="/products" className="block py-3 text-lg font-medium">Products</Link>
-            <Link to="/about" className="block py-3 text-lg font-medium">About</Link>
-            <Link to="/contact" className="block py-3 text-lg font-medium">Contact</Link>
-            <Link to="/affiliate" className="block py-3 text-lg font-medium">Affiliate</Link>
-            <Link to="/socials" className="block py-3 text-lg font-medium">Community</Link>
+        <div className="lg:hidden bg-[#080808] border-t border-white/[0.04]">
+          <div className="container mx-auto px-6 py-8 space-y-1">
+            {[
+              { to: '/', label: 'Home' },
+              { to: '/products', label: 'Products' },
+              { to: '/about', label: 'About' },
+              { to: '/contact', label: 'Contact' },
+              { to: '/affiliate', label: 'Affiliate' },
+              { to: '/socials', label: 'Community' },
+            ].map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 text-lg font-medium text-white/70 hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-4">
+              <Link to="/products" className="btn-primary w-full justify-center">
+                Shop Now
+              </Link>
+            </div>
           </div>
         </div>
       )}
