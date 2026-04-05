@@ -46,6 +46,7 @@ export const products: Product[] = [
       'Feet': '100% PTFE',
       'Dimensions': '120 x 58 x 38mm',
     },
+    comingSoon: true,
   },
   {
     id: 'crimson-r1',
