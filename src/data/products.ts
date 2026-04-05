@@ -80,6 +80,7 @@ export const products: Product[] = [
       'Feet': 'PTFE',
       'Dimensions': '122 x 60 x 40mm',
     },
+    comingSoon: true,
   },
   {
     id: 'c1',
