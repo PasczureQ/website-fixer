@@ -154,7 +154,7 @@ export const products: Product[] = [
     category: 'headset',
     tier: 'high',
     price: 129,
-    image: '/images/1000010675.png',
+    image: '/images/1000010675.jpg',
     description: 'Hear every detail. The Pulse X gaming headset delivers immersive 7.1 surround sound with crystal-clear communication. Carbon fiber construction ensures durability while maintaining lightweight comfort for marathon gaming sessions.',
     shortDescription: 'Premium gaming headset with 7.1 surround sound.',
     features: [
