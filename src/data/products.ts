@@ -148,6 +148,7 @@ export const products: Product[] = [
       'Feet': 'PTFE',
       'Dimensions': '118 x 62 x 40mm',
     },
+    comingSoon: true,
   },
   {
     id: 'pulse-x',
