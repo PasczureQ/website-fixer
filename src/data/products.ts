@@ -216,6 +216,7 @@ export const products: Product[] = [
       'Weight': '980g',
       'Dimensions': '320 x 140 x 35mm',
     },
+    comingSoon: true,
   },
 ];
 
