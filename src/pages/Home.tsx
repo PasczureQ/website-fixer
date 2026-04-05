@@ -9,7 +9,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredProducts = products.filter(p => !p.comingSoon).slice(0, 3);
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <main>
@@ -136,7 +136,7 @@ const Home = () => {
                         loading="lazy"
                       />
                     ) : (
-                      <span className="badge badge-coming-soon">Coming Soon</span>
+                      <span className="badge badge-coming-soon">Coming Soon — Late 2028–2032</span>
                     )}
                     <div className="absolute inset-0 bg-[#00d4ff]/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>

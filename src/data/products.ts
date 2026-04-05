@@ -46,6 +46,7 @@ export const products: Product[] = [
       'Feet': '100% PTFE',
       'Dimensions': '120 x 58 x 38mm',
     },
+    comingSoon: true,
   },
   {
     id: 'crimson-r1',
@@ -79,6 +80,7 @@ export const products: Product[] = [
       'Feet': 'PTFE',
       'Dimensions': '122 x 60 x 40mm',
     },
+    comingSoon: true,
   },
   {
     id: 'c1',
@@ -146,6 +148,7 @@ export const products: Product[] = [
       'Feet': 'PTFE',
       'Dimensions': '118 x 62 x 40mm',
     },
+    comingSoon: true,
   },
   {
     id: 'pulse-x',
@@ -179,6 +182,7 @@ export const products: Product[] = [
       'ANC': 'Yes',
       'Compatibility': 'PC, PS5, Xbox, Switch',
     },
+    comingSoon: true,
   },
   {
     id: 'k110',
@@ -212,6 +216,7 @@ export const products: Product[] = [
       'Weight': '980g',
       'Dimensions': '320 x 140 x 35mm',
     },
+    comingSoon: true,
   },
 ];
 

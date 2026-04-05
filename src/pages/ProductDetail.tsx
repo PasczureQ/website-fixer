@@ -78,7 +78,7 @@ const ProductDetail = () => {
                 />
               ) : (
                 <div className="text-center relative z-10">
-                  <span className="badge badge-coming-soon text-lg mb-6">Coming Soon</span>
+                  <span className="badge badge-coming-soon text-lg mb-6">Coming Soon — Late 2028–2032</span>
                   <p className="text-white/40 mt-4">This product is currently in development</p>
                 </div>
               )}
@@ -103,7 +103,7 @@ const ProductDetail = () => {
                 {product.category}
               </span>
               {product.comingSoon && (
-                <span className="badge badge-coming-soon">Coming Soon</span>
+                <span className="badge badge-coming-soon">Coming Soon — Late 2028–2032</span>
               )}
             </div>
 
@@ -113,8 +113,8 @@ const ProductDetail = () => {
             <div className="flex items-center gap-6 mb-8">
               <span className="text-4xl font-bold gradient-text">${product.price}</span>
               <div className="flex items-center gap-2 text-white/40">
-                <Check size={18} className="text-[#00d4ff]" />
-                <span className="text-sm">In Stock</span>
+                <Bell size={18} className="text-[#00d4ff]" />
+                <span className="text-sm">Coming Soon — Late 2028–2032</span>
               </div>
             </div>
 

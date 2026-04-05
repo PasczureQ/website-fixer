@@ -229,7 +229,7 @@ const Products = () => {
           transition={{ duration: 0.6 }}
           className="mt-20 glass rounded-xl p-8 md:p-12 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">More Coming Soon</h3>
+          <h3 className="text-2xl font-bold mb-4">More Products Coming Soon</h3>
           <p className="text-white/50 mb-6 max-w-lg mx-auto">
             We are constantly innovating. Sign up for our newsletter to be the first to know 
             about new product launches and exclusive offers.
@@ -264,7 +264,7 @@ const ProductCard = ({ product, large }: ProductCardProps) => {
             />
           ) : (
             <div className="text-center p-8">
-              <span className="badge badge-coming-soon mb-4">Coming Soon</span>
+              <span className="badge badge-coming-soon mb-4">Coming Soon — Late 2028–2032</span>
               <p className="text-white/40 text-sm">Stay tuned for updates</p>
             </div>
           )}
@@ -279,7 +279,7 @@ const ProductCard = ({ product, large }: ProductCardProps) => {
                 <span className="badge badge-accent">Best</span>
               )}
               {product.comingSoon && (
-                <span className="badge badge-coming-soon">Coming Soon</span>
+                <span className="badge badge-coming-soon">Coming Soon — Late 2028–2032</span>
               )}
             </div>
             <h3 className="text-xl font-semibold mb-2 group-hover:text-[#00d4ff] transition-colors">
