@@ -182,6 +182,7 @@ export const products: Product[] = [
       'ANC': 'Yes',
       'Compatibility': 'PC, PS5, Xbox, Switch',
     },
+    comingSoon: true,
   },
   {
     id: 'k110',
