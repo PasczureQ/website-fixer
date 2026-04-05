@@ -113,8 +113,8 @@ const ProductDetail = () => {
             <div className="flex items-center gap-6 mb-8">
               <span className="text-4xl font-bold gradient-text">${product.price}</span>
               <div className="flex items-center gap-2 text-white/40">
-                <Check size={18} className="text-[#00d4ff]" />
-                <span className="text-sm">In Stock</span>
+                <Bell size={18} className="text-[#00d4ff]" />
+                <span className="text-sm">Coming Soon — Late 2028–2032</span>
               </div>
             </div>
 
