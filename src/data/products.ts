@@ -21,7 +21,7 @@ export const products: Product[] = [
     category: 'mouse',
     tier: 'flagship',
     price: 189,
-    image: '/images/1000010676.png',
+    image: '/images/1000010676.jpg',
     description: 'The pinnacle of gaming precision. The Carbon X PRO features a revolutionary carbon fiber composite shell, delivering unmatched strength at under 40g. With 8KHz polling rate and the PixArt 3950 HS sensor, every micro-movement is captured with absolute accuracy.',
     shortDescription: 'Ultra-lightweight flagship gaming mouse under 40g with 8KHz polling.',
     features: [
@@ -121,7 +121,7 @@ export const products: Product[] = [
     category: 'mouse',
     tier: 'entry',
     price: 59,
-    image: '/images/1000010672.jpg',
+    image: '/images/1000010672.png',
     description: 'Entry-level excellence. The V1 brings premium features to aspiring competitive gamers. Do not let the price fool you—this mouse packs serious performance.',
     shortDescription: 'Entry-level gaming mouse with premium features.',
     features: [
@@ -154,7 +154,7 @@ export const products: Product[] = [
     category: 'headset',
     tier: 'high',
     price: 129,
-    image: '/images/1000010675.png',
+    image: '/images/1000010675.jpg',
     description: 'Hear every detail. The Pulse X gaming headset delivers immersive 7.1 surround sound with crystal-clear communication. Carbon fiber construction ensures durability while maintaining lightweight comfort for marathon gaming sessions.',
     shortDescription: 'Premium gaming headset with 7.1 surround sound.',
     features: [
