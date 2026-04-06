@@ -57,7 +57,7 @@ export const products: Product[] = [
     category: 'mouse',
     tier: 'high',
     price: 149,
-    image: '/images/1000010674.png',
+    image: assetUrl('/images/1000010674.png'),
     description: 'Bold aesthetics meet elite performance. The Crimson R1 features a striking red magnesium alloy frame with honeycomb ventilation for optimal thermal management. Designed for competitive gamers who demand both style and substance.',
     shortDescription: 'High-tier gaming mouse with striking design and premium performance.',
     features: [
