@@ -125,7 +125,7 @@ export const products: Product[] = [
     category: 'mouse',
     tier: 'entry',
     price: 59,
-    image: '/images/1000010672.png',
+    image: assetUrl('/images/1000010672.png'),
     description: 'Entry-level excellence. The V1 brings premium features to aspiring competitive gamers. Do not let the price fool you—this mouse packs serious performance.',
     shortDescription: 'Entry-level gaming mouse with premium features.',
     features: [
