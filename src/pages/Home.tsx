@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { products } from '../data/products';
+import { assetUrl } from '../lib/assets';
 
 const Home = () => {
   useEffect(() => {
