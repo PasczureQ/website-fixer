@@ -1,3 +1,5 @@
+import { assetUrl } from '../lib/assets';
+
 export interface Product {
   id: string;
   name: string;
