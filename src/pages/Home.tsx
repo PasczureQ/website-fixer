@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { products } from '../data/products';
+import { assetUrl } from '../lib/assets';
 
 const Home = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Home = () => {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-mouse.jpg"
+            src={assetUrl('/images/hero-mouse.jpg')}
             alt="Iravis Carbon X PRO"
             className="w-full h-full object-cover"
             width={1920}
@@ -228,7 +229,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] to-[#050505]" />
         <div className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
           <img
-            src="/images/1000010674.png"
+            src={assetUrl('/images/1000010674.png')}
             alt="Iravis Crimson R1"
             className="max-h-[70%] max-w-[80%] object-contain animate-float opacity-80"
             loading="lazy"
