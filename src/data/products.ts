@@ -193,7 +193,7 @@ export const products: Product[] = [
     category: 'keyboard',
     tier: 'high',
     price: 169,
-    image: '/images/1000010673.jpg',
+    image: assetUrl('/images/1000010673.jpg'),
     description: 'Type with precision. The K110 mechanical keyboard features a carbon fiber top plate, hot-swappable switches, and per-key RGB lighting. Built for gamers who demand the best typing and gaming experience.',
     shortDescription: 'Premium mechanical keyboard with carbon fiber construction.',
     features: [
