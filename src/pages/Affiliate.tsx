@@ -141,7 +141,7 @@ const Affiliate = () => {
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-[#141414] to-[#0a0a0a] rounded-2xl overflow-hidden">
                 <img
-                  src="/images/1000010671.png"
+                  src={assetUrl('/images/1000010671.png')}
                   alt="Iravis Mouse Lineup"
                   className="w-full h-full object-contain p-8"
                 />
