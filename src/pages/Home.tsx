@@ -19,7 +19,7 @@ const Home = () => {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-mouse.jpg"
+            src={assetUrl('/images/hero-mouse.jpg')}
             alt="Iravis Carbon X PRO"
             className="w-full h-full object-cover"
             width={1920}
