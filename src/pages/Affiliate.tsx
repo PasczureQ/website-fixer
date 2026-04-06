@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { assetUrl } from '../lib/assets';
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
